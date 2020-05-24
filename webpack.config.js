@@ -1,11 +1,13 @@
 //path est un module node.js qui permet de resoudre le chermin absolue avec "path.resolve"
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+
 //point d'entrée va être chargée en premier
 //webpack va ensuite annalyser ce fichier pour constituer l'arbre de dépendances
 //Chaques fichiers importées sont une dépendance de ce fichier
 module.exports = {
-  entry: path.resolve(__dirname, "src/index.js"),
+  entry: path.resolve(__dirname, "src/js/index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
     //"dirname permet d'écrire le chemin absolue"
@@ -16,12 +18,23 @@ module.exports = {
       //rules permet de créer différentes régles pour le loader le fichier qui est pas passée part exclude utilisera le loader "babel-loader"
     rules: [
       {
+        test: /\.scss$/,
+        loader: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        },
+      },
     ]
   },
   //les plugins permettent une opération globales lors du building comme optimiser le code et gérer les assets 
