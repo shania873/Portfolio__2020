@@ -1,0 +1,32 @@
+
+
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+
+
+/* main/scss*/
+@import "/settings/fontsize";
+@import "/settings/colors";
+
+@import "/tools/functions";
+@import "/tools/mixins";
+
+@import "/generic/reset";
+@import "/generic/normalize";
+
+@import "/elements/forms";
+@import "/elements/table";
+
+@import "/objects/container";
+@import "/objects/grid";
+
+@import "/components/header";
+@import "/components/buttons";
+@import "/components/carousel";
+
+@import "/trumps/clearfix";
+@import "/trumps/utilities";
+
