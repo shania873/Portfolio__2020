@@ -5,6 +5,7 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/images";
 
 
 /* main/scss*/
@@ -13,6 +14,8 @@
 
 @import "/tools/functions";
 @import "/tools/mixins";
+@import "/tools/animation";
+@import "/tools/cursor";
 
 @import "/generic/reset";
 @import "/generic/normalize";
@@ -23,9 +26,12 @@
 @import "/objects/container";
 @import "/objects/grid";
 
-@import "/components/header";
+@import "/components/header--website";
 @import "/components/buttons";
 @import "/components/carousel";
+@import "/components/main--website";
+@import "/components/menu--burger";
+@import "/components/container--acceuil";
 
 @import "/trumps/clearfix";
 @import "/trumps/utilities";

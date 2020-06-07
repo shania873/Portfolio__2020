@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
 
-<header>
-    <div class="header--logo"><img src="./assets/images/0.jpg" alt="logo--portfolio"></div>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="burger--icon">
-            <span>&#9776;</span>
-        </div>
-    </nav>
-</header>
-<main>
-    <div class="container">
-        <div class="col-sm-6"></div>
-        <div class="col-sm-6"></div>
-    </div>
-</main>
-<footer></footer>
+</head>
+
+<body>  
+  <div class="cursor"></div>
+    <div class="Menu">
     
+        <ul class="Menu-list" data-offset="10">
+          <li class="Menu-list-item" data-offset="20" onclick>
+            Home
+            <span class="Mask"><span>Home</span></span>
+            <span class="Mask"><span>Home</span></span>
+          </li>
+          <li class="Menu-list-item" data-offset="16" onclick>
+            About
+            <span class="Mask"><span>About</span></span>
+            <span class="Mask"><span>About</span></span>
+          </li>
+          <li class="Menu-list-item" data-offset="12" onclick>
+            Work
+            <span class="Mask"><span>Work</span></span>
+            <span class="Mask"><span>Work</span></span>
+          </li>
+          <li class="Menu-list-item" data-offset="8" onclick>
+            Contact
+            <span class="Mask"><span>Contact</span></span>
+            <span class="Mask"><span>Contact</span></span>
+          </li>
+        </ul>
+      </div>
+    <header class="header--website">
+        <div class="header--logo"><img class="img-fluid" src="./assets/images/Logo__Portfolio.svg" alt="logo--Portfolio"></div>
+      
+        <nav class="navbar--burger navbar-dark bg-dark">
+            <div class="col">
+                <div class="con">
+                  <div class="bar top"></div>
+                  <div class="bar middle"></div>
+                  <div class="bar bottom"></div>
+                </div>
+              </div>
+        </nav>
+        <nav class="navbar--logos navbar-dark bg-dark">  
+            <li>
+                <i class="fab fa-github"></i>
+            </li>
+            <li>
+                <i class="fab fa-linkedin-in"></i>
+            </li>       
+        </nav>
+    </header>
+    <main class="main--website">
+        <div class="container container--acceuil">
+     
+          <div class="col-sm-7 acceuil--left">
+            <div class="acceuil--content">
+              <span>Hello je suis</span>
+              <h1>Caroline van Aerschot</h1>
+              <h4>Graphic designer / Web designer / Web developper</h4>
+            </div>           
+        </div>
+        <div class="col-sm-4 acceuil--right">
+            <img src="./assets/images/Me__VectorAfter.svg" class="img-fluid" alt="Me__VectorAfter">
+            <img src="./assets/images/Me__Vector.svg" class="img-fluid" alt="Me__Vector">
+            <img src="./assets/images/Me__Background.svg" class="img-fluid" alt="Me__Background">
+        </div>   
+            
+        </div>
+    </main>
+    <footer></footer>
+
 </body>
+
 </html>

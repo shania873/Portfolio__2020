@@ -1,0 +1,105 @@
+.container--acceuil{
+    color: white;
+    position: relative;
+    display: flex;
+    .acceuil--left{
+        display: flex;
+        align-items: center;
+        .acceuil--content{
+            position: relative;
+            span{
+                color: #abababb8;
+                letter-spacing: 0.1rem;
+                font-weight: 100;
+            }
+            // span::before{
+            //     content: "<span>";
+            //     font-size: 1rem;
+            //     font-style: italic;
+            //     font-weight: 100;
+            //     color: #14dbf52e;
+            //     margin-right: 5px;
+            //     font-family: "latin_modern_mono_light_c10Ob";
+            // }
+            // span::after{
+            //     content: "</span>";
+            //     font-size: 1rem;
+            //     font-style: italic;
+            //     font-weight: 100;
+            //     color: #14dbf52e;
+            //     margin-left: 5px;
+            //     font-family: "latin_modern_mono_light_c10Ob";
+            // }
+            h1{
+                font-size: 2.8rem;
+                margin: 0;
+            }
+            h1::before{
+                content: "<h1>";
+                font-size: 1rem;
+                font-style: italic;
+                font-weight: 100;
+                color: #ffffff4a;
+                margin-right: 5px;
+                font-family: "latin_modern_mono_light_c10Ob";
+            }
+            h1::after{
+                content: "</h1>";
+                font-size: 1rem;
+                font-style: italic;
+                font-weight: 100;
+                color: #ffffff4a;
+                margin-left: 5px;
+                font-family: "latin_modern_mono_light_c10Ob";
+            }
+            h4{
+                color: #abababb8;
+                font-size: 0.8rem;
+                letter-spacing: 0.1rem;
+                text-transform: uppercase;
+            }
+            // h4::before{
+            //     content: "<h4>";
+            //     font-size: 1rem;
+            //     font-style: italic;
+            //     font-weight: 100;
+            //     color: #dad8d82e;
+            //     margin-right: 5px;
+            //     text-transform: none;
+            //     font-family: "latin_modern_mono_light_c10Ob";
+            // }
+            // h4::after{
+            //     content: "</h4>";
+            //     font-size: 1rem;
+            //     font-style: italic;
+            //     font-weight: 100;
+            //     text-transform: none;
+            //     color: #dad8d82e;
+            //     margin-left: 5px;
+            //     font-family: "latin_modern_mono_light_c10Ob";
+            // }
+        }
+    }
+    .acceuil--right{
+        display: flex;
+        align-items: center;
+
+        margin: 0 15px 0 15px;
+
+        img:nth-child(1){
+            position: absolute;
+            z-index: 2;
+        }
+        img:nth-child(2){
+            position: absolute;
+            z-index: 1;
+            top: -64px;
+        }
+        img:nth-child(3){
+            position: absolute;
+            z-index: -1;
+            top: -98px;
+            left: -5px;
+        }
+    }
+}

@@ -1,11 +1,26 @@
 :root {
     --bg-primary: #1E1E1E;  
+    --icon-svg: #dad8d8;
+    --bg-logo: #151515;
+    --bg-header: #232323;
+    --bg-burgerIcon : white;
   }
+  // *{
+  //   pointer-events: none;
+  //   // cursor: none;
+  // }
+  * {
+    // cursor: none;
+}
 
 
 body{
     height:100vh;
     background-color: var(--bg-primary);
     margin: 0;
+    font-family: latobold;
     
+}
+li{
+  list-style-type: none;
 }
