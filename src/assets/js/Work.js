@@ -21,13 +21,14 @@ var images = [];
 var url;
 class Work extends React.Component {
   
-    // state = {
-    //     images: []
-    //   }
+    state = {
+        images: []
+      }
  
       componentDidMount() {
         axios.get(`http://localhost:5000/api`)
           .then(res => {
+            images = [];
             // const images = res.data.data.children.map(obj => obj.data);
             for (let i= 0; i < 8; i++) {
               var images2 = res.data.data[i];
@@ -46,13 +47,13 @@ class Work extends React.Component {
          <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 900: 4}}>
           <Masonry columnsCount={0} gutter="0px">
             {images.map((image, i) => (
-              <a href={`project/${image.id_travaux}`}>
+              <a href={`/#/projectWork/${image.id_travaux}`}>
                  <img key={i} src={image.src} style={{width: "100%", display: "block"}} />
               </a>              
             ))}
           </Masonry>    
         </ResponsiveMasonry> 
-         {images} 
+         {/* {this.state.images}  */}
         </div>
       </Fragment>
     )

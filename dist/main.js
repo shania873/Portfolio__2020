@@ -51115,6 +51115,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Work__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Work */ "./src/assets/js/Work.js");
 /* harmony import */ var _Project__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Project */ "./src/assets/js/Project.js");
 /* harmony import */ var _Contact__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Contact */ "./src/assets/js/Contact.js");
+/* harmony import */ var _Child__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Child */ "./src/assets/js/Child.js");
+
 
 
 
@@ -51145,10 +51147,41 @@ var AppRouter = function AppRouter() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Project__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/contact",
     component: _Contact__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Contact__WEBPACK_IMPORTED_MODULE_7__["default"], null))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Contact__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/projectWork/:id",
+    component: _Child__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Child__WEBPACK_IMPORTED_MODULE_8__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (AppRouter);
+
+/***/ }),
+
+/***/ "./src/assets/js/Child.js":
+/*!********************************!*\
+  !*** ./src/assets/js/Child.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+function Child() {
+  // We can use the `useParams` hook here to access
+  // the dynamic pieces of the URL.
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
+      id = _useParams.id;
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ID: ", id));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Child);
 
 /***/ }),
 
@@ -51586,25 +51619,31 @@ var Work = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Work);
 
   function Work() {
+    var _temp, _this;
+
     _classCallCheck(this, Work);
 
-    return _super.apply(this, arguments);
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _super.call.apply(_super, [this].concat(args)), _this.state = {
+      images: []
+    }, _temp));
   }
 
   _createClass(Work, [{
     key: "componentDidMount",
-    // state = {
-    //     images: []
-    //   }
     value: function componentDidMount() {
-      var _this = this;
+      var _this2 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:5000/api").then(function (res) {
-        // const images = res.data.data.children.map(obj => obj.data);
+        images = []; // const images = res.data.data.children.map(obj => obj.data);
+
         for (var i = 0; i < 8; i++) {
           var images2 = res.data.data[i];
 
-          _this.setState({
+          _this2.setState({
             images: images
           });
 
@@ -51633,7 +51672,7 @@ var Work = /*#__PURE__*/function (_React$Component) {
         gutter: "0px"
       }, images.map(function (image, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "project/".concat(image.id_travaux)
+          href: "/#/projectWork/".concat(image.id_travaux)
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           key: i,
           src: image.src,
@@ -51642,7 +51681,7 @@ var Work = /*#__PURE__*/function (_React$Component) {
             display: "block"
           }
         }));
-      }))), images));
+      })))));
     }
   }]);
 
