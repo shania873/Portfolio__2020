@@ -18,6 +18,7 @@ import axios from 'axios';
 //   "https://picsum.photos/300/300?image=206"
 // ]
 var images = [];
+var url;
 class Work extends React.Component {
   
     // state = {
@@ -29,12 +30,12 @@ class Work extends React.Component {
           .then(res => {
             // const images = res.data.data.children.map(obj => obj.data);
             for (let i= 0; i < 8; i++) {
-              var images2 = res.data.data[i].src;
+              var images2 = res.data.data[i];
               this.setState({ images });
               console.log(images);  
               images.push(images2);
             }
-           
+     
           });
       }
       
@@ -45,15 +46,12 @@ class Work extends React.Component {
          <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 900: 4}}>
           <Masonry columnsCount={0} gutter="0px">
             {images.map((image, i) => (
-              <img
-                key={i}
-                src={image}
-                style={{width: "100%", display: "block"}}
-              />
+              <a href={`project/${image.id_travaux}`}>
+                 <img key={i} src={image.src} style={{width: "100%", display: "block"}} />
+              </a>              
             ))}
-          </Masonry> 
-          {/* {images} */}
-        </ResponsiveMasonry> *
+          </Masonry>    
+        </ResponsiveMasonry> 
          {images} 
         </div>
       </Fragment>

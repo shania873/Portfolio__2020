@@ -51578,6 +51578,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 // ]
 
 var images = [];
+var url;
 
 var Work = /*#__PURE__*/function (_React$Component) {
   _inherits(Work, _React$Component);
@@ -51601,7 +51602,7 @@ var Work = /*#__PURE__*/function (_React$Component) {
       axios__WEBPACK_IMPORTED_MODULE_3___default.a.get("http://localhost:5000/api").then(function (res) {
         // const images = res.data.data.children.map(obj => obj.data);
         for (var i = 0; i < 8; i++) {
-          var images2 = res.data.data[i].src;
+          var images2 = res.data.data[i];
 
           _this.setState({
             images: images
@@ -51631,15 +51632,17 @@ var Work = /*#__PURE__*/function (_React$Component) {
         columnsCount: 0,
         gutter: "0px"
       }, images.map(function (image, i) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "project/".concat(image.id_travaux)
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           key: i,
-          src: image,
+          src: image.src,
           style: {
             width: "100%",
             display: "block"
           }
-        });
-      }))), " *", images));
+        }));
+      }))), images));
     }
   }]);
 
