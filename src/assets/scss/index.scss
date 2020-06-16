@@ -1,0 +1,44 @@
+
+
+
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+/* main/scss*/
+@import "/settings/fontsize";
+@import "/settings/colors";
+
+@import "/tools/functions";
+@import "/tools/mixins";
+@import "/tools/animation";
+@import "/tools/cursor";
+
+@import "/generic/reset";
+@import "/generic/normalize";
+
+@import "/elements/forms";
+@import "/elements/table";
+@import "/elements/title";
+
+@import "/objects/container";
+@import "/objects/grid";
+
+@import "/components/header--website";
+@import "/components/buttons";
+@import "/components/carousel";
+@import "/components/main--website";
+@import "/components/menu--burger";
+@import "/components/container--acceuil";
+@import "/components/container--about";
+@import "/components/container--skills";
+@import "/components/container--contact";
+@import "/components/container--project";
+@import "/components/container--work";
+
+@import "/trumps/clearfix";
+@import "/trumps/utilities";
+

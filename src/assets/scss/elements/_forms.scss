@@ -1,0 +1,72 @@
+form {
+    .set--input {
+        margin: 1rem 0 2rem 0;
+        position: relative;
+
+        Label {
+            position: absolute;
+            top: 9px;
+            bottom: 0;
+            margin: auto;
+            left: 7px;
+            right: 0;
+            display: flex;
+            margin: auto;
+            font-size: 0.8rem;
+            cursor: text;
+            color: #909090;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+        }
+
+        textarea {
+            background-color: #1e1e1e;
+            border: 1px solid #5d5d5d;
+            padding: 0.5rem;
+            width: 100%;
+            resize: none;
+            color: white;
+            height: 114px;
+        }
+
+        Input {
+
+            background-color: #1e1e1e;
+            border: 1px solid #5d5d5d;
+            padding: 0.5rem;
+            width: 100%;
+            resize: none;
+            color: white;
+
+        }
+
+        span {
+            display: inline-block;
+            width: 0;
+            height: 2px;
+            background-color: #6fffe9;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+}
+
+
+
+        ////
+    }
+
+
+
+
+
+
+
+}

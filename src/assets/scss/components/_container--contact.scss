@@ -1,0 +1,59 @@
+.container--contact{
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .contact--left{
+        display: flex;
+        align-items: center;
+        p{
+            line-height: 1.5rem;
+          }
+             span{
+                color: #abababb8;
+                letter-spacing: 0.1rem;
+                font-weight: 100;
+            }           
+        
+           ul{
+               padding: 0;
+               li{
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+               }
+               li:nth-child(1)::before{
+                content: '📧';
+                font-size: 2rem;
+                width: 50px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: left;
+               }
+               li:nth-child(2)::before{
+                content: '📱';
+                font-size: 2rem;
+                width: 50px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: left;
+               }
+           }
+         
+          
+        }
+    }
+    .contact--right{
+        display: flex;
+        align-items: center;
+       position: relative;
+        margin: 0 15px 0 15px;
+        height:100vh;
+        justify-content: center;
+        // padding-left: 8rem;
+        form{
+            max-width: 74%;
+            width: 100%;
+        }
+}

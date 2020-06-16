@@ -1,0 +1,40 @@
+.container--about{
+    color: white;
+    position: relative;
+    display: flex;
+    .about--left{
+        display: flex;
+        align-items: center;
+        
+            img:nth-child(1){
+                position: absolute;
+                z-index: 2;
+            }
+            img:nth-child(2){
+                position: absolute;
+                z-index: 1;
+                // top: -64px;
+            }
+         
+          
+        }
+    }
+    .about--right{
+        display: flex;
+        align-items: center;
+       position: relative;
+        margin: 0 15px 0 15px;
+        height:100vh;
+        justify-content: center;
+        padding-left: 8rem;
+        .about--content{
+          p{
+            line-height: 1.5rem;
+          }
+             span{
+                color: #abababb8;
+                letter-spacing: 0.1rem;
+                font-weight: 100;
+            }    
+    }
+}

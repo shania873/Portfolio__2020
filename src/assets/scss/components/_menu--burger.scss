@@ -1,0 +1,200 @@
+// === Variables =====
+$perspective:     60rem;
+$font-size:       4.25rem;
+$split-position:  49%;
+$split-thickness: 4px;
+$split-color:     #FF2C75;
+
+// === Settings =====
+%font-settings {
+  font-family: "Gilroy ExtraBold", system-ui, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
+}
+
+.Menu{
+  position: absolute;
+  display: flex;
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: none;
+  z-index: 10;
+  background-color: #383838;
+
+  .Menu-list {
+    @extend %font-settings;
+    font-size: $font-size;
+    line-height: 1.2;
+    padding: 0;
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotateX(-10deg) rotateY(20deg); // overwritten by JS
+    .Menu-list-item {
+      position: relative;
+      color: transparent;
+      cursor: pointer;
+      
+    
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: $split-position;
+        left: -10%;
+        right: -10%;
+        height: $split-thickness;
+        border-radius: $split-thickness;
+        margin-top: -($split-thickness / 2);
+        background: $split-color;
+        transform: scale(0);
+        transition: transform .8s cubic-bezier(.16,1.08,.38,.98);
+        z-index: 1;
+      }
+    }
+    
+    // === Top/bottom mask =====
+    .Mask {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      color: $split-color;
+      top: 0;
+      height: $split-position;
+      transition: all .8s cubic-bezier(.16,1.08,.38,.98);
+      
+      span { display: block; }
+    }
+    
+    // === Bottom mask specific =====
+    .Mask + .Mask {
+      top: $split-position - 0.1;
+      height: 100 - $split-position + 0.1;
+      
+      span { transform: translateY(-$split-position); }
+    }
+    
+    // === Where the fun stuff happens =====
+    .Menu-list-item:hover,
+    .Menu-list-item:active {
+      .Mask { color: #FFF; transform: skewX(12deg) translateX(5px); }
+      .Mask + .Mask { transform: skewX(12deg) translateX(-5px); }
+      &::before { transform: scale(1); }
+    }
+  }
+  
+  &.active{
+    display: flex;
+}  
+  
+}
+
+.con,
+.special-con {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bar {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background: #6FFFE9;
+  margin: 6px auto;
+}
+
+.con {
+  width: auto;
+  margin: 0 auto;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.con:hover .bar,.special-con:hover .bar {
+ background-color: #f92c8c;
+}
+
+.col {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  height: auto;
+  position: relative;
+}
+
+.middle {
+  margin: 0 auto;
+}
+
+.bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.top--Active {
+  transform: translateY(3px) rotateZ(45deg);
+  -webkit-transform: translateY(3px) rotateZ(45deg);
+  -moz-transform: translateY(3px) rotateZ(45deg);
+  -ms-transform: translateY(3px) rotateZ(45deg);
+  -o-transform: translateY(3px) rotateZ(45deg);
+}
+
+.bottom--Active {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.middle--Active {
+  width: 0;
+}
+
+
+
+.ua {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  color: #6FFFE9;
+  font-size: 2em;
+}
+
+.fa {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.ua:hover .fa {
+  color: #6FFFE9;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}

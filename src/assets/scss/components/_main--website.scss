@@ -1,0 +1,20 @@
+.main--website{   
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 320px) {
+    .main--website{
+       right: auto;
+       bottom: 0;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .main--website{
+        right: 0;
+        bottom: auto;
+        height: 100%;
+    }
+  }

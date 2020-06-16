@@ -1,0 +1,43 @@
+.container--project{
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .project--left{
+        display: flex;
+        align-items: center;
+        
+              
+          
+           ul{
+               padding: 0;
+               li{
+                display: flex;
+                align-items: left;
+                margin-bottom: 1rem;
+                flex-direction: column;
+               }   
+               span{
+                color: #abababb8;
+                letter-spacing: 0.1rem;
+                font-weight: 100;
+                font-size: 0.8rem;
+                margin-top: 0.8rem;
+            }               
+              
+           }
+         
+          
+        }
+    }
+    .project--right{
+        display: flex;
+        align-items: center;
+       position: relative;
+        margin: 0 15px 0 15px;
+        height:100vh;
+        justify-content: center;
+        // padding-left: 8rem;
+       
+}
