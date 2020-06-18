@@ -31,11 +31,11 @@ const Header = () =>(
             <span className='Mask'><span>Work</span></span>
             <span className='Mask'><span>Work</span></span></NavLink>
           </li>
-          <li className='Menu-list-item'>
+          {/* <li className='Menu-list-item'>
           <NavLink to="/project"> Project
             <span className='Mask'><span>Project</span></span>
             <span className='Mask'><span>Project</span></span></NavLink>
-          </li>
+          </li> */}
           <li className='Menu-list-item'>
           <NavLink to="/contact">Contact
             <span className='Mask'><span>Contact</span></span>

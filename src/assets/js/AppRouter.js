@@ -14,32 +14,18 @@ import Project from './Project';
 import Contact from './Contact';
 import Child from './Child';
 
-const AppRouter = () => (
+const AppRouter = (props) => (
     <main className="main--website">  
-    <Switch>
-          <Route exact={true}  path="/" >
-            <Home />
-          </Route>
-          <Route path="/about" component={About}>
-            <About />
-          </Route>
-          <Route path="/skills" component={Skills}>
-            <Skills />
-          </Route>
-          <Route path="/work" component={Work}>
-            <Work />
-          </Route>
-          <Route path="/project" component={Project}>
-            <Project />
-          </Route>
-          <Route path="/contact" component={Contact}>
-            <Contact />
-          </Route>
-          <Route path="/projectWork/:id" component={Child}>
-              <Child />
-          </Route>
+        <Switch>
+              <Route exact={true}  path="/" />         
+              <Route path="/about" component={About}/>           
+              <Route path="/skills" component={Skills}/>        
+              <Route path="/work" component={Work}/>         
+              <Route path="/project" component={Project}/>           
+              <Route path="/contact" component={Contact}/>   
+              <Route path="/:id" component={Child} />
         </Switch>
-        </main>
+     </main>
 
 )
     
