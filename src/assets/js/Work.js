@@ -2,9 +2,8 @@ import React, { Fragment } from "react";
 import $ from 'jquery';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import axios from 'axios';
-import { makeStyles } from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
 let images = [];
+import { SimpleImg } from 'react-simple-img';
 class Work extends React.Component {
   constructor(props){
     super(props);
@@ -35,7 +34,8 @@ class Work extends React.Component {
               <Masonry columnsCount={0} gutter="0px">
                 {images.map((image,i) => (
                   <a key={i} href={`/#/${i}`}>
-                    <img src={image.src} style={{width: "100%", display: "block"}} />    {this.state.id}
+                <SimpleImg src={image.src} style={{width: "100%", display: "block"}} />   
+                 {/* <img src={image.src} style={{width: "100%", display: "block"}} />    {this.state.id} */}
                   </a>              
                 ))}
               </Masonry>    

@@ -1,12 +1,13 @@
 import React from 'react';
 const Skills = () => (
 <div className="container container--skills">
-     <div className="col-sm-5 skills--left">
+     <div className="col-sm-7 skills--left">
         <img src="../../../src/assets/img/desk__chairAlone.svg" className="img-fluid Me__Vector" alt="Me__Vector"/>
         <h2>web developpement</h2>
-        <img src="../../../src/assets/img/Me__Vector.svg" className="img-fluid Me__Vector" alt="Me__Vector"/>
+        <canvas className="canvas img-fluid Me__Vector"></canvas>
+        {/* <img src="../../../src/assets/img/Me__Vector.svg" className="img-fluid Me__Vector" alt="Me__Vector"/> */}
      </div>
-        <div className="col-sm-7 mr-4 skills--right ml-4">
+        <div className="col-sm-5 mr-4 skills--right ml-4">
         <div className="skills--content">
             <h1>SKILLS & EXPERIENCE </h1>
             <p>Ayant eu des contrats déterminées ou de freelance, j’ai pu à l’occasion gagner en expérience que
