@@ -11,36 +11,26 @@ const Header = () =>(
     <div className='cursor'></div>
     <div className='Menu'>
         <ul className='Menu-list' data-offset='10'>
+        <NavLink to="/">  <li className='Menu-list-item'>
+          Home          
+          </li></NavLink> 
+          <NavLink to="/about"><li className='Menu-list-item'>
+           About 
+          
+          </li></NavLink>
+          <NavLink to="/skills"><li className='Menu-list-item'>
+           Skills
+           
+          </li></NavLink>
+          <NavLink to="/work">
           <li className='Menu-list-item'>
-          <NavLink to="/">  Home
-            <span className='Mask'><span>Home</span></span>
-            <span className='Mask'><span>Home</span></span></NavLink>
-          </li>
-          <li className='Menu-list-item'>
-          <NavLink to="/about"> About
-            <span className='Mask'><span>About</span></span>
-            <span className='Mask'><span>About</span></span></NavLink>
-          </li>
-          <li className='Menu-list-item'>
-          <NavLink to="/skills"> Skills
-            <span className='Mask'><span>Skills</span></span>
-            <span className='Mask'><span>Skills</span></span></NavLink>
-          </li>
-          <li className='Menu-list-item'>
-          <NavLink to="/work"> Work
-            <span className='Mask'><span>Work</span></span>
-            <span className='Mask'><span>Work</span></span></NavLink>
-          </li>
-          {/* <li className='Menu-list-item'>
-          <NavLink to="/project"> Project
-            <span className='Mask'><span>Project</span></span>
-            <span className='Mask'><span>Project</span></span></NavLink>
-          </li> */}
-          <li className='Menu-list-item'>
-          <NavLink to="/contact">Contact
-            <span className='Mask'><span>Contact</span></span>
-            <span className='Mask'><span>Contact</span></span></NavLink>
-          </li>
+           Work
+          
+          </li></NavLink>          
+          <NavLink to="/contact"><li className='Menu-list-item'>
+          Contact
+         
+          </li></NavLink>
         </ul>
       </div>
       <header className="header--website">

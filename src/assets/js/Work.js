@@ -4,12 +4,21 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import axios from 'axios';
 let images = [];
 import { SimpleImg } from 'react-simple-img';
+import { NProgress } from '@tanem/react-nprogress'
+import Bar from './Bar';
+import Container from './Container';
+import Spinner from './Spinner';
+const callFakeAPI = (delay) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, delay)
+  })
 class Work extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       images: "",
-      id: ""
+      id: "",
+      isLoading: true
     }
   }
     
@@ -19,8 +28,12 @@ class Work extends React.Component {
             images = [];       
             for (let i= 0; i < 8; i++) {
               var images2 = res.data.data[i];            
-              this.setState({images: [images]});       
+              // this.setState({images: [images]});       
               images.push(images2);
+              this.setState(() => ({
+                isLoading: false,
+                images: [images]
+              }))
             }     
           });
       }
@@ -29,13 +42,24 @@ class Work extends React.Component {
 
     return (
       <Fragment>
+          <NProgress isAnimating={this.state.isLoading}>
+          {({ isFinished, progress, animationDuration }) => (
+            <Container
+              isFinished={isFinished}
+              animationDuration={animationDuration}
+            >
+              <Bar progress={progress} animationDuration={animationDuration} />
+              <Spinner />
+            </Container>
+          )}
+        </NProgress>   
          <div className="container--work" style={{width: "100%", height: "100%"}}>
             <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 900: 4}}>
               <Masonry columnsCount={0} gutter="0px">
                 {images.map((image,i) => (
                   <a key={i} href={`/#/${i}`}>
-                <SimpleImg src={image.src} style={{width: "100%", display: "block"}} />   
-                 {/* <img src={image.src} style={{width: "100%", display: "block"}} />    {this.state.id} */}
+                {/* <SimpleImg src={image.src} style={{width: "100%", display: "block"}} />    */}
+                 <img src={image.src} style={{width: "100%", display: "block"}} />    {this.state.id}
                   </a>              
                 ))}
               </Masonry>    

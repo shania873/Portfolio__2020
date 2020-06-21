@@ -1,10 +1,9 @@
 import React, { Fragment, Component } from 'react';
-import LoadingOverlay from 'react-loading-overlay';
-import Loading from './loading';
 import { NProgress } from '@tanem/react-nprogress'
 import Bar from './Bar';
 import Container from './Container';
 import Spinner from './Spinner';
+import Blob from './blob';
 
 const callFakeAPI = (delay) =>
   new Promise((resolve) => {
@@ -36,10 +35,9 @@ class Home extends React.Component {
               <Spinner />
             </Container>
           )}
-        </NProgress>
-        {/* <h1>{this.state.isLoading ? 'Loading...' : 'Loaded!'}</h1> */}
+        </NProgress>      
 		<div className="container container--acceuil">    
-			<div className="col-sm-7 acceuil--left">
+			<div className="col-sm-7 col-xs-12 acceuil--left">
 			<div className="acceuil--content">
 				<div id="scene--content">          
 				<span >Hello je suis</span>
@@ -49,9 +47,10 @@ class Home extends React.Component {
 				</div>
 			</div>           
 		</div>
-		<div className="col-sm-4 acceuil--right">    	 
+		<div className="col-sm-4 col-xs-12 acceuil--right">    	 
 			<img  src="../../../src/assets/img/Me__VectorAfter.svg" className="bob-y img-fluid Me__VectorAfter" alt="Me__VectorAfter"/>
-			<canvas className="canvas img-fluid Me__Vector"></canvas>
+			{/* <canvas className="canvas img-fluid Me__Vector"></canvas> */}
+      <Blob/>
 			{/* <img  src="../../../src/assets/img/Me__Vector.svg" className="  img-fluid Me__Vector" alt="Me__Vector" /> */}
 			<img   src="../../../src/assets/img/Me__Background.svg" className="img-fluid Me__Background" alt="Me__Background" />
 		</div>        

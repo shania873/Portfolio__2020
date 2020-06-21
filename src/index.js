@@ -149,45 +149,45 @@ function Cursor(){
 }
 
 function containerBubbles(){
-  // Fetch reference to canvas.
+ 
   const canvas = document.querySelectorAll("canvas")[0];
-console.log(canvas);
-  // Set blob size relative to window, but limit to 600.
+
+ 
   const size = Math.min(600, Math.min(window.innerWidth - 64, window.innerHeight - 400));
   canvas.style.width = `${size}px`;
   canvas.style.height = `${size}px`;
 
-  // Scale resolution to take into account device pixel ratio.
+  
   const resolution = size * (window.devicePixelRatio || 1);
   canvas.width = resolution;
   canvas.height = resolution;
 
-  // Compute logo size and position.
+
   const logoWidth = resolution * 0.8;
   const logoHeight = logoWidth * 0.4;
   const logoOffsetX = (resolution - logoWidth) / 2;
   const logoOffsetY = (resolution - logoHeight) / 2;
 
-  // Set blob color and set context to erase intersection of content.
+
   const ctx = canvas.getContext("2d");
   ctx.fillStyle = "#0dca7b";
   ctx.globalCompositeOperation = "xor";
 
-  // Use logo word asset to cut out from the generated blob.
+ 
   const logoWord = new Image();
   logoWord.src = "../src/assets/img/Me__Background.svg";
 
-  // Create animation and draw its frames in `requestAnimationFrame` callbacks.
+ 
   const animation = blobs2Animate.canvasPath();
   const renderFrame = () => {
       ctx.clearRect(0, 0, resolution, resolution);
-    //   ctx.drawImage(logoWord, logoOffsetX, logoOffsetY, logoWidth, logoHeight);
+  
       ctx.fill(animation.renderFrame());
       requestAnimationFrame(renderFrame);
   };
   requestAnimationFrame(renderFrame);
 
-  // Generate a keyframe with overridable default values.
+ 
   const genFrame = (overrides) => ({
       duration: 4000,
       timingFunction: "ease",
@@ -201,13 +201,12 @@ console.log(canvas);
       ...overrides,
   });
 
-  // Callback for every frame which starts transition to a new frame.
+ 
   const loopAnimation = () => animation.transition(genFrame());
 
-  // Immediately show a shape.
   animation.transition(genFrame({duration: 0}));
 
-  // Quickly animate to a new frame when canvas is clicked.
+ 
   canvas.onclick = () => {
       animation.transition(genFrame({duration: 400, timingFunction: "elasticEnd0"}));
   };
@@ -218,7 +217,7 @@ console.log(canvas);
         IntervalResize();
         ParralaxForMenu();
         // ParralaxForMee();
-        containerBubbles();
+        // containerBubbles();
         EffectBtnBurger();
         Cursor();      
     }    

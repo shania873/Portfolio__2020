@@ -25,7 +25,7 @@ const AppRouter = (props) => (
               <Route path="/work" component={Work}/>         
               <Route path="/project" component={Project}/>           
               <Route path="/contact" component={Contact}/>   
-              <Route path="/:id" name="jkljklkl" component={Child} />
+              <Route path="/:id" component={Child} />
         </Switch>
      </main>
 

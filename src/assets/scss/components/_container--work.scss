@@ -1,3 +1,25 @@
+.container--project{
+    width: 100%;
+    height: 100%;
+    padding: 0 14rem 0 14rem;
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: white;
+        a{
+            color: var(--color-btn);
+            text-decoration: none;
+        }
+    }
+    img{
+        margin-bottom: 2rem;
+    }
+
+}
+
 .container--work{
     width: 100%;
     height: 100%;
