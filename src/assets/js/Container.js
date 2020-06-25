@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import * as React from 'react'
-
+// import children from './Child';
 const Container = ({ children, isFinished, animationDuration }) => (
-  <div
+  <div 
     style={{
         width: `100%`,
         height: `100vh`,
-        backgroundColor: `black`,
+        backgroundColor: `var(--bg-header)`,
         position:`absolute`,
       opacity: isFinished ? 0 : 1,
       pointerEvents: 'none',
@@ -15,6 +15,7 @@ const Container = ({ children, isFinished, animationDuration }) => (
     }}
   >
     {children}
+   
   </div>
 )
 

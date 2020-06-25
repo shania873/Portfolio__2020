@@ -27,7 +27,7 @@
     "cursor-dot": "^1.0.5",
     "express": "^4.17.1",
     "gooey-react": "^1.0.1",
-    "gsap": "^3.3.0",
+    "gsap": "^3.3.4",
     "jquery": "^3.5.1",
     "material-ui": "^0.20.2",
     "mysql": "^2.18.1",
@@ -43,6 +43,7 @@
     "react-router-dom": "^5.2.0",
     "react-shape-editor": "^3.5.3",
     "react-simple-img": "^2.3.9",
+    "react-slideshow-image": "^1.5.3",
     "react-spinners": "^0.8.3",
     "react-transition-group": "^4.4.1",
     "webpack-dev-server": "^3.11.0"

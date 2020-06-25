@@ -25,9 +25,16 @@
                 top: 0;
                 position: absolute;
                 top: 75px;
+                opacity: 0;
             }
          
-          
+          .set--arrow{
+            bottom: 0;
+            position: absolute;
+              i{
+                  color: white;
+              }
+          }
         }
     }
     .skills--right{
@@ -40,6 +47,8 @@
         // padding-left: 5rem;
         // background-color: #171616;
         .skills--content{
+            position:absolute;
+            opacity: 0;
           p{
             line-height: 1.5rem;
           }

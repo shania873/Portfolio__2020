@@ -3,7 +3,7 @@ import { NProgress } from '@tanem/react-nprogress'
 import Bar from './Bar';
 import Container from './Container';
 import Spinner from './Spinner';
-
+import Blob from './blob';
 const callFakeAPI = (delay) =>
   new Promise((resolve) => {
     setTimeout(resolve, delay)
@@ -36,42 +36,42 @@ class Contact extends React.Component {
           )}
         </NProgress>     
     <div className="container container--contact">
-    <div className="col-sm-4 mr-4 contact--left">
+    <div className="col-lg-5 col-sm-12 col-xs-12 contact--left">
         <div className="contact--content">
-            <h1>contact</h1>
-            <p>Une question me concernant ? Un élément “flou” que vous voulez éclairer ? N’hésitez pas à
+            {/* <h1>contact</h1> */}
+           
+              <img src="../../../src/assets/img/img--contact.svg" className="bob-y img--contact" alt="img--contact"/>
+              <h2>Contact</h2>
+      <Blob/>
+        </div>
+    </div>
+    <div className="col-lg-6 col-sm-12 col-xs-12 contact--right">
+     <p>Une question me concernant ? Un élément “flou” que vous voulez éclairer ? N’hésitez pas à
                 m’envoyer un mail, ou m’envoyer un message via ce formulaire:
             </p>
 
-            <ul>
-                <li>vanaeca@hotmail.com</li>
-                <li>0472/28.81.98</li>
-            </ul>
-
-        </div>
-    </div>
-    <div className="col-sm-4 contact--right">
+           
         <form>
             <div className="set--input">
-                <label className="Label Name__Label" for="name">Votre Nom</label>
+                <label className="Label Name__Label" htmlFor="name">Votre Nom</label>
                 <input type="text" className="Input Name__Input" name="fields" placeholder="" id="name" />                   
                 <span className="enter"></span>   
             </div>
             
             <div className="set--input">
-                <label className="Label Email__Label" for="email">Votre Email</label>
+                <label className="Label Email__Label" htmlFor="email">Votre Email</label>
                 <input type="text" className="Input Email__Input" name="fields"  placeholder="" id="email"/>                   
                 <span className="enter"></span>  
             </div>
 
             <div className="set--input">
-                <label className="Label Message__Label" for="message">Votre message</label>
+                <label className="Label Message__Label" htmlFor="message">Votre message</label>
                 <textarea className="Input Message__Input" name="fields"  placeholder="" id="message"></textarea>                   
                 <span className="enter"></span>  
             </div>
             <button>ENVOYER</button>
         
-        </form>
+        </form> 
     </div>
 </div>
 </React.Fragment>

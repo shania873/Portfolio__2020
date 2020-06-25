@@ -38,7 +38,7 @@ const callFakeAPI = (delay) =>
             )}
           </NProgress>      
     <div className="container container--about">
-    <div className="col-sm-6 about--left">
+    <div className="col-lg-6 col-sm-12 col-xs-12 about--left">
       <img src="../../../src/assets/img/desk.svg" className="bob-y img-fluid Me__Vector" alt="Me__Vector" />
       <h2><span>à</span> propos de moi</h2>
       <Blob/>
@@ -46,7 +46,7 @@ const callFakeAPI = (delay) =>
     
      
   </div>
-      <div className="col-sm-6 mr-4 about--right">
+      <div className="col-lg-6 col-sm-12 col-xs-12 about--right">
           <div className="about--content">               
               {/* <h1>à propos de moi</h1> */}
               <p>Passionnée en technologie et création graphique depuis des années, j’ai obtenue un bachelier en Infographie spécialitée web à la Haute Ecole Francisco Ferrer à Bruxelles, 

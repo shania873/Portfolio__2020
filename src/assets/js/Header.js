@@ -9,7 +9,7 @@ import {browserHistory} from 'react-router';
 const Header = () =>(
     <React.Fragment>
     <div className='cursor'></div>
-    <div className='Menu'>
+    <div className='Menu slide-in-top'>
         <ul className='Menu-list' data-offset='10'>
         <NavLink to="/">  <li className='Menu-list-item'>
           Home          
