@@ -37,7 +37,7 @@ function IntervalResize(){
                 let resultatWidthWithPx = resultatWidth + "px";
                 main[0].style.width = resultatWidthWithPx;     
                 main[0].style.height = "100%";         
-                
+                console.log('desktop'); 
                
 
             }, 500);
@@ -56,7 +56,7 @@ function IntervalResize(){
                 main[0].style.width = "100%";
                 main[0].style.height = resultatHeightWithPx;      
                 main[0].style.top = headerHeight + "px";   
-                console.log('bonweight');    
+                console.log('tablet');    
             }, 500);
         }
        
@@ -212,16 +212,129 @@ function containerBubbles(){
   };
 }
 
+function SliderFunc(){
+    
+
+var Numb0 = document.querySelectorAll(".Numb0");
+var Numb1 = document.querySelectorAll(".Numb1");
+
+var prevBtn = document.getElementById("btn--prev");
+var nextBtn = document.getElementById("btn--next");
+
+var btnStop = document.getElementById("stop--interval");
+var btnPlay = document.getElementById("play--interval");
+var myVar;
+
+// console.log(Numb0);
+// console.log(Numb1);
+
+nextBtn.classList.add("active");
+
+Numb0.forEach(element => {
+    // console.log(element);
+    element.classList.add("active");    
+});
+
+
+
+
+var Num = 0;
+myVar = setInterval(myTimer, 3000);
+
+function myTimer() {
+  Num++;
+
+//   console.log(Numb0);
+
+  if (Num === 2) {
+    Num = 0;
+  }
+
+  if (Num < 1) {
+    prevBtn.classList.remove("active");
+    nextBtn.classList.add("active");
+
+    Numb0.forEach(element => {
+        element.classList.add("active");   
+        // console.log(element); 
+    });
+    Numb1.forEach(element => {
+        element.classList.remove("active");
+        // console.log(element);
+    });  
+  }
+
+  if (Num > 0) {
+    prevBtn.classList.add("active");
+    nextBtn.classList.remove("active");
+
+    Numb0.forEach(element => {
+        element.classList.remove("active");  
+        // console.log(element);
+    });
+    Numb1.forEach(element => {
+        element.classList.add("active");
+        // console.log(element);
+    });
+  }
+}
+
+btnPlay.addEventListener("click", function() {
+  myVar = setInterval(myTimer, 3000);
+  console.log(myVar);
+});
+
+btnStop.addEventListener("click", function() {
+  clearInterval(myVar);
+  console.log(myVar);
+});
+
+prevBtn.addEventListener("click", function() {
+  clearInterval(myVar);
+  prevBtn.classList.remove("active");
+  nextBtn.classList.add("active");
+
+ 
+    Numb0.forEach(element => {
+        console.log(element);
+        element.classList.add("active");    
+    });
+    Numb1.forEach(element => {
+        console.log(element);
+        element.classList.remove("active");
+    });  
+  console.log("clickprev");
+  console.log(myVar);
+});
+
+nextBtn.addEventListener("click", function() {
+  clearInterval(myVar);
+  prevBtn.classList.add("active");
+  nextBtn.classList.remove("active");
+  console.log(myVar);
+
+    Numb0.forEach(element => {
+        console.log(element);
+        element.classList.remove("active");  
+    });
+    Numb1.forEach(element => {  
+        console.log(element);
+        element.classList.add("active");
+    });
+  console.log("clicknext");
+});
+
+}
 
     function Init(){
+        SliderFunc();
         IntervalResize();
+        
         ParralaxForMenu();
-        // ParralaxForMee();
-        // containerBubbles();
         EffectBtnBurger();
         Cursor();      
     }    
 
-
+    // window.onload = function() {Init()};
 Init();
 // import "./assets/js/navbar.js";

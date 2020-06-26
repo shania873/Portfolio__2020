@@ -25,7 +25,7 @@
                 top: 0;
                 position: absolute;
                 top: 75px;
-                opacity: 0;
+                // opacity: 0;
             }
          
           .set--arrow{
@@ -34,6 +34,28 @@
               i{
                   color: white;
               }
+          }
+          .Numb0{
+            color: white;
+            display: none;
+            opacity: 0;
+            &.active{
+              opacity: 1;
+              display: block !important;
+              -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+              animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+          }
+          .Numb1{
+            color: white;
+            display: none;
+            opacity: 0;
+            &.active{
+              opacity: 1;
+              display: block !important;
+              -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+              animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
           }
         }
     }
@@ -48,7 +70,7 @@
         // background-color: #171616;
         .skills--content{
             position:absolute;
-            opacity: 0;
+            // opacity: 0;
           p{
             line-height: 1.5rem;
           }
@@ -84,4 +106,33 @@
             }
           
     }
-}
+    .Numb0{
+        color: white;
+        display: none;
+        opacity: 0;
+        &.active{
+	        opacity: 1;
+	        display: block !important;
+	        -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+      }
+      .Numb1{
+        color: white;
+        display: none;
+        opacity: 0;
+        &.active{
+          opacity: 1;
+          display: block !important;
+          -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+      }
+  }   
+  .set--arrows{
+    position: absolute;
+    bottom: 32px;
+    width: 234px;
+    display: flex;
+    justify-content: space-between;
+  }
