@@ -36,21 +36,19 @@ class Contact extends React.Component {
           )}
         </NProgress>     
     <div className="container container--contact">
-    <div className="col-lg-5 col-sm-12 col-xs-12 contact--left">
+      <div className="row">
+      <div className="col-lg-6 col-sm-12 col-12 contact--left d-flex align-items-center">
         <div className="contact--content">
-            {/* <h1>contact</h1> */}
-           
-              <img src="../../../src/assets/img/img--contact.svg" className="bob-y img--contact" alt="img--contact"/>
-              <h2>Contact</h2>
+        <h2>Contact</h2>           
+              <img src="../../../src/assets/img/img--contact.svg" className="bob-y img--contact img-fluid" alt="img--contact"/>         
       <Blob/>
         </div>
     </div>
-    <div className="col-lg-6 col-sm-12 col-xs-12 contact--right">
-     <p>Une question me concernant ? Un élément “flou” que vous voulez éclairer ? N’hésitez pas à
+    <div className="col-lg-6 col-sm-12 col-12 contact--right d-flex align-items-centers">
+    <div className="contact--content">
+    <p>Une question me concernant ? Un élément “flou” que vous voulez éclairer ? N’hésitez pas à
                 m’envoyer un mail, ou m’envoyer un message via ce formulaire:
             </p>
-
-           
         <form>
             <div className="set--input">
                 <label className="Label Name__Label" htmlFor="name">Votre Nom</label>
@@ -73,6 +71,10 @@ class Contact extends React.Component {
         
         </form> 
     </div>
+    
+    </div>
+      </div>
+   
 </div>
 </React.Fragment>
 )}

@@ -4,11 +4,19 @@
   }
   .Blob_Shape{
     background-color: #0dca7b;
-    position: absolute;
+    position: relative;
+    // left: 0;
+    // right: 0;
+    // top: 0;
+    // bottom: 0;
+    // margin: auto;
+    z-index: -1;
 }
-
+html,body{
+  height: 100%; /* necessary */
+}
 body{
-    height:100vh;
+    // height:100%;
     background-color: var(--bg-primary);
     margin: 0;
     font-family: latobold;
@@ -20,3 +28,19 @@ body{
 li{
   list-style-type: none;
 }
+
+#root{
+  height: 100%;
+}
+
+@media screen and (min-width: 320px) {
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+}
+
+

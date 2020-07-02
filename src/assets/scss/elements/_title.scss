@@ -3,21 +3,21 @@ h1{
    
     margin-bottom: 3rem;
 }
-h1::before{
-    content: "<h1>";
-    font-size: 1rem;
-    font-style: italic;
-    font-weight: 100;
-    color: #ffffff4a;
-    margin-right: 5px;
-    font-family: "latin_modern_mono_light_c10Ob";
-}
-h1::after{
-    content: "</h1>";
-    font-size: 1rem;
-    font-style: italic;
-    font-weight: 100;
-    color: #ffffff4a;
-    margin-left: 5px;
-    font-family: "latin_modern_mono_light_c10Ob";
-}
+// h1::before{
+//     content: "<h1>";
+//     font-size: 1rem;
+//     font-style: italic;
+//     font-weight: 100;
+//     color: #ffffff4a;
+//     margin-right: 5px;
+//     font-family: "latin_modern_mono_light_c10Ob";
+// }
+// h1::after{
+//     content: "</h1>";
+//     font-size: 1rem;
+//     font-style: italic;
+//     font-weight: 100;
+//     color: #ffffff4a;
+//     margin-left: 5px;
+//     font-family: "latin_modern_mono_light_c10Ob";
+// }

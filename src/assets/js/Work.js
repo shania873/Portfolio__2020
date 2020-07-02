@@ -28,7 +28,7 @@ class Work extends React.Component {
             images = [];       
             for (let i= 0; i < 8; i++) {
               var images2 = res.data.data[i];            
-              console.log(images);  
+              // console.log(images);  
               images.push(images2);
               this.setState(() => ({
                 isLoading: false,
@@ -54,13 +54,13 @@ class Work extends React.Component {
           )}
         </NProgress>   
          <div className="container--work" style={{width: "100%", height: "100%"}}>
-            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 900: 4}}>
+            <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 3, 900: 6}}>
               <Masonry columnsCount={0} gutter="0px">
 
                 {images.map((image,i) => (
                   <div className="img--items">
                       <h5>{image.Nom_travaux}</h5>
-                        <a key={i} href={`/#/${i}`}>                     
+                        <a href={`/#/${i}`}>                     
                           <img src={image.src} style={{width: "100%", display: "block"}} />
                         </a>    
                   </div>                         

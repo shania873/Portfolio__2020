@@ -1,17 +1,13 @@
 .container--about{
     color: white;
-    position: relative;
-    display: flex;
+  position: relative;
+ 
     .about--left{
-        display: flex;
-        align-items: center;
+     
             h2{
-                z-index: 1;
-                font-size: 4rem;
-                top: 0;
-                position: absolute;
-                top: 141px;
-                // text-transform: capitalize;
+              z-index: 1;       
+              top: 0;
+              // position: absolute;         
                 span{
                     text-transform: uppercase;
                 }
@@ -19,22 +15,13 @@
         
             img:nth-child(1){
                 position: absolute;
-                z-index: 2;
-                width: 74%;
-                top: 124px;
-                bottom: 0;
-                margin: auto;
+                z-index: 2;              
+              
             }      
         }
     }
     .about--right{
-        display: flex;
-        align-items: center;
-       position: relative;
-        margin: 0 15px 0 15px;
-        height:100vh;
-        justify-content: center;
-        // padding-left: 8rem;
+    
         .about--content{
           p{
             line-height: 1.5rem;
@@ -46,3 +33,90 @@
             }    
     }
 }
+
+@media screen and (min-width: 320px) {
+    .container--about {
+      .about--right{
+        .about--content{
+          p{
+            font-size: 0.8rem;
+          }
+          button{}
+        }
+      }
+      .about--left{
+       
+        h2{      
+          font-size: 2.5rem;
+          position: relative;      
+      
+        }
+        img:nth-child(1){
+          max-width: 234px;
+          top: 124px;
+          bottom: 0px;
+        }
+        .Blob_Shape{
+          max-width: 213px;
+          max-height: 230px;
+      }     
+      }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .container--about {
+    display: flex;
+    align-items: center;
+    height:100%;
+    .about--right{
+      .about--content{
+        p{
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+    .about--left{   
+      img:nth-child(1){
+        max-width: 323px;
+        top: 150px;
+        bottom: 0px;
+      }
+      .Blob_Shape {
+        max-width: 250px;
+        max-height: 250px;
+    }
+      h2{      
+        font-size: 3.5rem;
+      
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .container--about {
+     
+     
+      .about--right{
+        
+      }
+      .about--left{
+        .Blob_Shape{
+          max-width: 324px;
+          max-height: 324px;
+      }
+        h2{      
+          font-size: 3.2rem;
+          position: absolute;
+        }
+      }
+    }
+}
+
+

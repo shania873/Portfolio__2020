@@ -1,43 +1,21 @@
 .container--contact{
     color: white;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .contact--left{
-        
-        position: relative;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+ 
+    .contact--left{       
+
+   
         .contact--content{          
-            width: 100%;
+         
           
-            height: 60%;
-            position: relative;
+         
             img{
-                position: absolute;
-                z-index: 3;
-                max-width: 410px;
-                right: 0;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto;   
+                z-index: 3;  
             }
             h2{
-                position: absolute;
                 z-index: 1;
-                margin: 0;
-                /* bottom: 237px; */
-                font-size: 7rem;
-                top: 18px;
-                margin: auto;
-                            
             }
             .Blob_Shape{
-                position: absolute;
                 z-index: -1;               
             }
         }
@@ -47,20 +25,126 @@
         }
     }
     .contact--right{
-        display: flex;
-        align-items: center;
-        position: relative;
-        margin: 0 15px 0 15px;
-        height: 100vh;
-        justify-content: center;
-        padding: 0 5rem 0 5rem;
-        flex-direction: column;
+     
+
+     
+     
         form{
-            max-width: 100%;
-            width: 100%;
+         
         }
         p{
             font-size: 1rem;
             line-height: 1.4rem;
         }
 }
+
+@media screen and (min-width: 320px) {
+    .container--contact {
+    
+    
+      .contact--right{
+        
+      }
+      .contact--left{
+       
+        .contact--content{
+          .Blob_Shape{
+            max-width: 231px;
+            max-height: 202px;
+            left: auto;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            margin-bottom: 22px;
+          }
+          h2{      
+            font-size: 2.5rem;
+          
+            text-align: right;
+          
+            position: relative;
+            top: 15px;
+            margin: 0;
+          }
+          img{
+            position: absolute;
+            max-width: 265px;
+            /* top: 27px; */
+            /* bottom: 0;*/
+            margin-top: 30px;
+        
+          }
+        }
+     
+      }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .container--contact {
+    top: 0px;
+    display: flex;
+    align-items: center;
+    height:100%;
+    .contact--right{
+    
+    }
+    .contact--left{
+
+      .contact--content{
+        .Blob_Shape{
+          max-width: 332px;
+          max-height: 314px;
+        }
+        h2{      
+          font-size: 5rem;
+          margin: 0;
+          top: 96px;
+         
+       
+        }
+        .Blob_Shape{
+          max-width: 324px;
+          max-height: 324px;
+        }
+        img{
+          max-width: 400px;
+          top: 180px;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .container--contact {
+     
+     
+      .contact--right{
+        
+      }
+      .contact--left{
+     
+        .contact--content{
+          .Blob_Shape{
+          
+          }
+          h2{      
+            font-size: 5rem;
+            position: absolute;
+            margin: 0;
+            left: 134px;
+        
+          }
+          img{}
+        }
+      }
+    }
+}
+
