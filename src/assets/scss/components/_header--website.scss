@@ -69,7 +69,7 @@
   }
   @media screen and (min-width: 768px){
     .header--website{
-        position: absolute;
+        // position: absolute;
         .navbar--logos{
         //   display: none;
         }
@@ -79,7 +79,7 @@
   @media screen and (min-width: 1024px) {
     .header--website{
         max-width: 83px;        
-        // position:absolute;
+        position:fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

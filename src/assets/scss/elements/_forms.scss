@@ -32,15 +32,22 @@ form {
             height: 114px;
         }
 
-        Input {
-
+        .Input {
+            border-radius: 0;
             background-color: #1e1e1e;
             border: 1px solid #5d5d5d;
             padding: 0.5rem;
             width: 100%;
             resize: none;
             color: white;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+}
 
+        .Input{
+            // border: 0;
         }
 
         span {
@@ -56,17 +63,17 @@ form {
             -moz-transition: all 0.5s;
             -ms-transition: all 0.5s;
             -o-transition: all 0.5s;
+
+          
+        }   
+    }
 }
 
 
+input:focus {
+    outline-offset: -2px;
 
-        ////
-    }
-
-
-
-
-
-
-
+}
+.active--fields{
+    width: 100%!important;
 }

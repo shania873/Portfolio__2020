@@ -1,116 +1,92 @@
-.container--contact{
-    color: white;
-    position: relative;
- 
-    .contact--left{       
-
-   
-        .contact--content{          
-         
-          
-         
-            img{
-                z-index: 3;  
-            }
-            h2{
-                z-index: 1;
-            }
-            .Blob_Shape{
-                z-index: -1;               
-            }
-        }
-     
-      
-          
-        }
+.container--contact {
+  color: white;
+  position: relative;
+  .contact--left {
+    .contact--content {
+      img {
+        z-index: 3;
+      }
+      h2 {
+        z-index: 1;
+      }
+      .Blob_Shape {
+        z-index: -1;
+      }
     }
-    .contact--right{
-     
+  }
+}
 
-     
-     
-        form{
-         
-        }
-        p{
-            font-size: 1rem;
-            line-height: 1.4rem;
-        }
+.contact--right {
+  margin: auto;
+  form {}
+  p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 }
 
 @media screen and (min-width: 320px) {
-    .container--contact {
-    
-    
-      .contact--right{
-        
-      }
-      .contact--left{
-       
-        .contact--content{
-          .Blob_Shape{
-            max-width: 231px;
-            max-height: 202px;
-            left: auto;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            margin-bottom: 22px;
-          }
-          h2{      
-            font-size: 2.5rem;
-          
-            text-align: right;
-          
-            position: relative;
-            top: 15px;
-            margin: 0;
-          }
-          img{
-            position: absolute;
-            max-width: 265px;
-            /* top: 27px; */
-            /* bottom: 0;*/
-            margin-top: 30px;
-        
-          }
+  .container--contact {
+    .contact--right {}
+    .contact--left {
+      .contact--content {
+        .Blob_Shape {
+          max-width: 231px;
+          max-height: 202px;
+          left: auto;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          margin-bottom: 22px;
         }
-     
-      }
 
+        h2 {
+          font-size: 2.9rem;
+          text-align: right;
+          position: relative;
+          top: 53px;
+          margin: 0;
+          left: 28px;
+        }
+
+        img {
+          position: absolute;
+          max-width: 265px;
+          margin-top: 30px;
+        }
+      }
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container--contact {
-    top: 0px;
+    height: 100%;
     display: flex;
     align-items: center;
-    height:100%;
-    .contact--right{
-    
-    }
-    .contact--left{
-
-      .contact--content{
-        .Blob_Shape{
+    .contact--right {}
+    .contact--left {
+      .contact--content {
+        .Blob_Shape {
           max-width: 332px;
           max-height: 314px;
         }
-        h2{      
-          font-size: 5rem;
+
+        h2 {
+          font-size: 4rem;
           margin: 0;
-          top: 96px;
-         
-       
+          top: 115px;
+          left: 0px;
         }
-        .Blob_Shape{
+
+        .Blob_Shape {
           max-width: 324px;
           max-height: 324px;
         }
-        img{
-          max-width: 400px;
+
+        img {
+          max-width: 300px;
           top: 180px;
           margin-top: 0px;
         }
@@ -123,28 +99,28 @@
 
 
 @media screen and (min-width: 1024px) {
-    .container--contact {
-     
-     
-      .contact--right{
-        
-      }
-      .contact--left{
-     
-        .contact--content{
-          .Blob_Shape{
-          
-          }
-          h2{      
-            font-size: 5rem;
-            position: absolute;
-            margin: 0;
-            left: 134px;
-        
-          }
-          img{}
+  .container--contact {
+    .contact--right {}
+
+    .contact--left {
+      .contact--content {
+        .Blob_Shape {
+          max-width: 276px;
+          max-height: 281px;
+          left: 35px;
+          top: 42px;
+        }
+        h2 {
+          font-size: 4rem;
+          position: absolute;
+          margin: 0;
+          left: 165px;
+
+        }
+        img {
+          max-width: 400px;
         }
       }
     }
+  }
 }
-

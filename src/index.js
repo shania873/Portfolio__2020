@@ -11,6 +11,8 @@ import Goo from 'gooey-react';
 import * as blobs2 from "blobs/v2";
 import * as blobs2Animate from "blobs/v2/animate";
 
+
+
 // import * as Animatable from 'react-native-animatable';
 // MyCustomComponent = Animatable.createAnimatableComponent(MyCustomComponent);
 import {
@@ -432,11 +434,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //animateLoading();
 });
 }
+
+function Form(){
+  var Input = document.querySelectorAll("Input");
+  Input.forEach(element => {
+    element.addEventListener("focus", function(){
+        console.log(this);
+    });  
+  });  
+}
+
+
+
+
     function Init(){
         // SliderFunc();
         // IntervalResize();
         // Loading();
-        
+        // Form();
         ParralaxForMenu();
         EffectBtnBurger();
         Cursor();      

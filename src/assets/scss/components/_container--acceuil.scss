@@ -66,7 +66,7 @@ svg{ transform-origin: 50%!important }
 @media screen and (min-width: 320px) {
     .container--acceuil {
         position: relative;
-        // top: 20px;
+    top: 15px;
         .acceuil--left {
           
 
@@ -116,12 +116,8 @@ svg{ transform-origin: 50%!important }
 }
 
 @media screen and (min-width: 375px) {
-    .container--acceuil {
-        position: relative;
-        top: 0px;
-        .acceuil--left {
-            // margin-top: 58px;
-           
+    .container--acceuil {   
+        .acceuil--left {           
 
               h1{
                 font-size: 2.5rem;
@@ -132,15 +128,9 @@ svg{ transform-origin: 50%!important }
 
      
         }
-        .acceuil--right {  
-         
-            img:nth-child(1) {
-           
-            }
-            .Blob_Shape{
-             
-            }         
-          
+        .acceuil--right {           
+            img:nth-child(1) {}
+            .Blob_Shape{}
             img:nth-child(3) {
                 left: 125px;
             }
@@ -148,7 +138,21 @@ svg{ transform-origin: 50%!important }
     }
 }
 
-
+@media screen and (min-width:425px){
+    .container--acceuil {      
+        .acceuil--left {       
+              h1{}
+              h4{}     
+        }
+        .acceuil--right {           
+            img:nth-child(1) {}
+            .Blob_Shape{}
+            img:nth-child(3) {
+                left: 186px;
+            }
+        }
+    }
+}
 @media screen and (min-width: 768px) {
     .container--acceuil {
         display: flex;
@@ -174,7 +178,7 @@ svg{ transform-origin: 50%!important }
             
              .Blob_Shape{
                 max-width: 254px;
-                left: 41px;
+                left: 15px;
                 top: 24px;
                 max-height: 237px;
             }

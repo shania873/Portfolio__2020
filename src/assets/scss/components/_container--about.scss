@@ -64,7 +64,27 @@
 
     }
 }
+@media screen and (min-width: 425px) {
+  .container--about {
+    .about--right{
+      .about--content{
+        p{}
+        button{}
+      }
+    }
+    .about--left{
+     
+      h2{}
+      img:nth-child(1){
+        max-width: 253px;
+        top: 150px;
+        bottom: 0px;
+      }
+      .Blob_Shape{}     
+    }
 
+  }
+}
 @media screen and (min-width: 768px) {
   .container--about {
     display: flex;
@@ -80,7 +100,7 @@
     }
     .about--left{   
       img:nth-child(1){
-        max-width: 323px;
+        max-width: 273px;
         top: 150px;
         bottom: 0px;
       }
@@ -89,7 +109,7 @@
         max-height: 250px;
     }
       h2{      
-        font-size: 3.5rem;
+        font-size: 2.6rem;
       
       }
     }
