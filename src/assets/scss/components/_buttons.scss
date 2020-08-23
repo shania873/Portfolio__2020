@@ -24,6 +24,7 @@ button:hover{cursor: pointer}
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
+        color: #08fdd8;
 }
 
     /*button:before (attr data-hover)*/
@@ -31,11 +32,12 @@ button:hover{cursor: pointer}
     button:before{
       content: attr(data-hover);
       position: absolute;
-      top: 1.1em; left: 0;
+      // top: 1.1em; 
+      left: 0;
       width: 100%;
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-weight: 800;
+      font-weight: 400;
       font-size: .8em;
       opacity: 0;
       transform: translate(-100%,0);
@@ -50,3 +52,31 @@ button:hover{cursor: pointer}
         font-size: .8em;
         transition: all .3s ease-in-out;
       }
+
+.close{
+  position: absolute;
+    right: 0;
+    top: 0;
+    margin: 36px;
+    opacity: 0;
+    color: white;
+    &.active{
+      opacity: 1;
+      transition: all 1s;
+      -webkit-transition: all 1s;
+      -moz-transition: all 1s;
+      -ms-transition: all 1s;
+      -o-transition: all 1s;
+}
+}
+
+@media (min-width:768px){
+  .close{
+    font-size: 4rem;
+  }
+}
+@media (min-width:320px){
+  .close{
+    font-size: 4rem;
+  }
+}

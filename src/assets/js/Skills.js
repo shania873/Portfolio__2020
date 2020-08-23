@@ -1,13 +1,11 @@
 import React from 'react';
 import {NProgress} from '@tanem/react-nprogress';
 import '@babel/polyfill';
-import $ from 'jquery';
 import Bar from './Bar';
 import Container from './Container';
 import Spinner from './Spinner';
-import Blob from './blob';
 import SimpleSlider from './Slider';
-import {TimelineLite, CSSPlugin} from "gsap/all";
+
 
 const callFakeAPI = (delay) => new Promise((resolve) => {
     setTimeout(resolve, delay)

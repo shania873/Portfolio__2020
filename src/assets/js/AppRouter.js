@@ -18,8 +18,6 @@ const AppRouter = (props) => (
     <main className="main--website">  
         <Switch>
               <Route exact={true}  path="/" component={Home} />     
-
-                  
               <Route path="/about" component={About}/>           
               <Route path="/skills" component={Skills}/>        
               <Route path="/work" component={Work}/>         
@@ -28,8 +26,7 @@ const AppRouter = (props) => (
               <Route path="/:id" component={Child} />
         </Switch>
      </main>
-
-)
+  )
     
   
   export default AppRouter;

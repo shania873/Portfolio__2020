@@ -4,8 +4,8 @@ form {
         position: relative;
 
         Label {
-            position: absolute;
-            top: 9px;
+            position: relative;
+            top: 24px;
             bottom: 0;
             margin: auto;
             left: 7px;
@@ -76,4 +76,9 @@ input:focus {
 }
 .active--fields{
     width: 100%!important;
+}
+
+.active--label{
+    left: 0!important;
+    top: -8px!important;
 }

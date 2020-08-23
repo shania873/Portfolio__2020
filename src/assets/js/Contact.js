@@ -2,6 +2,7 @@ import React from 'react';
 import {NProgress} from '@tanem/react-nprogress'
 import Bar from './Bar';
 import Container from './Container';
+import axios from 'axios';
 import Spinner from './Spinner';
 import Blob from './blob';
 const callFakeAPI = (delay) => new Promise((resolve) => {
@@ -9,49 +10,67 @@ const callFakeAPI = (delay) => new Promise((resolve) => {
 })
 
 class Contact extends React.Component {
-    state = {
-        isLoading: true
+    constructor(props) {
+        super(props);      
+        this.state = {
+            fname: '',
+            lname: '',
+            email: '',
+            isLoading: true
+          };  
     }
 
+    onChange = (e) => {       
+        this.setState({ [e.target.name]: e.target.value });
+     
+      }
+
+   
+      onSubmit = (e) => {
+        e.preventDefault();
+        // get our form data out of state
+        const { fname, lname, email } = this.state;
+        console.log(this.state);
+        axios.post('http://localhost:5000/sendmail', { fname, lname, email })
+          .then((result) => {
+              console.log(axios);
+            //access the results here....
+          });
+      }
     async componentDidMount() {
         await callFakeAPI(3000)
         this.setState(() => ({isLoading: false}))
-        var Input = document.getElementsByName("fields");
+        var Input = document.querySelectorAll("Input");
 
         Input.forEach(element => {
-            console.log(element);
+            // console.log(element);
             element.addEventListener("focusin", myFocusFunction);
             element.addEventListener("focusout", myBlurFunction);
 
             function myFocusFunction() {
-                this
-                    .nextSibling
-                    .classList
-                    .add("active--fields");
-                this
-                    .previousSibling
-                    .classList
-                    .add("active--label");
+
+                this.nextSibling.classList.add("active--fields");
+                this.previousSibling.classList.add("active--label");
+
+              
             }
 
             function myBlurFunction() {
-                this
-                    .nextSibling
-                    .classList
-                    .remove("active--fields");
-                this
-                    .previousSibling
-                    .classList
-                    .remove("active--label");
+                this.nextSibling.classList.remove("active--fields");
+               
+                // console.log(this.value);
+                if(this.value){
+                    // console.log(this.value);
+                }else{
+                    this.previousSibling.classList.remove("active--label");
+                }
             }
-            //     element.addEventListener("focus", function(){
-            // console.log(this.nextSibling);
-            // this.nextSibling.classList.toggle("mystyle");     //
-            // this.nextSibling.style.width = "100%";   });
         });
+
     }
 
     render() {
+        const { fname, lname, email } = this.state;
         return (
             <React.Fragment>
                 <NProgress isAnimating={this.state.isLoading}>
@@ -81,13 +100,15 @@ class Contact extends React.Component {
                                 <p>Une question me concernant ? Un élément “flou” que vous voulez éclairer ?
                                     N’hésitez pas à m’envoyer un mail, ou m’envoyer un message via ce formulaire:
                                 </p>
-                                <form>
+                                <form onSubmit={this.onSubmit} action="/sendmail" method="POST" autocomplete="off">
                                     <div className="set--input">
                                         <label className="Label Name__Label" htmlFor="name">Votre Nom</label>
-                                        <input
-                                            type="text"
+                                          <input                                       
+                                            value={fname}
+                                            onChange={this.onChange}
+                                            type="text"                                          
                                             className="Input Name__Input"
-                                            name="fields"
+                                            name="fname"
                                             placeholder=""
                                             id="name"/>
                                         <span className="enter"></span>
@@ -95,10 +116,12 @@ class Contact extends React.Component {
 
                                     <div className="set--input">
                                         <label className="Label Email__Label" htmlFor="email">Votre Email</label>
-                                        <input
-                                            type="text"
+                                        <input                                            
+                                            value={lname}
+                                            onChange={this.onChange}
+                                            type="text"                                                                                    
                                             className="Input Email__Input"
-                                            name="fields"
+                                            name="lname"
                                             placeholder=""
                                             id="email"/>
                                         <span className="enter"></span>
@@ -106,16 +129,20 @@ class Contact extends React.Component {
 
                                     <div className="set--input">
                                         <label className="Label Message__Label" htmlFor="message">Votre message</label>
-                                        <textarea
+                                        <textarea                                               
+                                              value={email}
+                                            onChange={this.onChange}                            
                                             className="Input Message__Input"
-                                            name="fields"
+                                            name="email"                                          
                                             placeholder=""
                                             id="message"></textarea>
                                         <span className="enter"></span>
                                     </div>
                                     <div className="btn--set">
-                                      <button data-hover="Merci!"><div>ENVOYER</div></button>
-                                    </div>                                   
+                                        <button data-hover="Merci!">
+                                            <div>ENVOYER</div>
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
 

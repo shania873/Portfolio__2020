@@ -10,9 +10,14 @@ const callFakeAPI = (delay) => new Promise((resolve) => {
 })
 
 class Home extends React.Component {
-    state = {
-        isLoading: true
+    constructor(props) {
+        super(props);   
+
+        this.state = {
+            isLoading: true     
+        };
     }
+
 
     async componentDidMount() {
         await callFakeAPI(3000)
@@ -24,7 +29,10 @@ class Home extends React.Component {
             <React.Fragment>
                 <NProgress isAnimating={this.state.isLoading}>
                     {({isFinished, progress, animationDuration}) => (
-                        <Container isFinished={isFinished} animationDuration={animationDuration}></Container>
+                        <Container isFinished={isFinished} animationDuration={animationDuration}>
+                            <Bar progress={progress} animationDuration={animationDuration}/>
+                            <Spinner/>
+                        </Container>
                     )}
                 </NProgress>
                 <div className="container container--acceuil">

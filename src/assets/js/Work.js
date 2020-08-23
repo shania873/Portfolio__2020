@@ -27,8 +27,7 @@ class Work extends React.Component {
             .then(res => {
                 images = [];
                 for (let i = 0; i < 8; i++) {
-                    var images2 = res.data.data[i];
-                    // console.log(images);
+                    var images2 = res.data.data[i];                 
                     images.push(images2);
                     this.setState(() => ({isLoading: false, images: [images]}))
                 }
@@ -60,9 +59,7 @@ class Work extends React.Component {
                         1024: 5
                     }}>
                         <Masonry columnsCount={0} gutter="0px">
-
                             {images.map((image, i, index) => (
-
                                 <figure key={index} className="imghvr-push-down">
                                     <img key={index} src={image.src} alt="example-image"/>
                                     <figcaption>
@@ -72,11 +69,9 @@ class Work extends React.Component {
                                     </figcaption>
                                     <a href={`/#/${i}`}></a>
                                 </figure>
-
                             ))}
                         </Masonry>
                     </ResponsiveMasonry>
-
                 </div>
             </Fragment>
         )

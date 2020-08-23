@@ -6,10 +6,95 @@ import {
   NavLink 
 } from "react-router-dom";
 import {browserHistory} from 'react-router';
-const Header = () =>(
+
+// function func(){
+//     const btnBurger = document.querySelector(".col");
+//     const Menu = document.querySelector(".Menu");
+//     const ListItem = document.querySelectorAll(".Menu-list-item");
+
+
+//     let TopBar = document.querySelector(".top");
+//     let BottomBar = document.querySelector(".bottom");
+//     let MiddleBar = document.querySelector(".middle");
+    
+     
+//     btnBurger.addEventListener("click", function(){
+//         Menu.classList.toggle("active");
+//         TopBar.classList.toggle("top--Active");
+//         BottomBar.classList.toggle("bottom--Active");
+//         MiddleBar.classList.toggle("middle--Active");    
+//         console.log("btn");
+//     });
+
+//     ListItem.forEach(element => {      
+//         element.addEventListener("click", function(){         
+//             Menu.classList.remove("active");
+//             TopBar.classList.remove("top--Active");
+//             BottomBar.classList.remove("bottom--Active");
+//             MiddleBar.classList.remove("middle--Active");    
+//             console.log("btn");
+//         });    
+//     });
+
+// }
+
+
+
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {};
+    }
+    componentDidMount() {
+        let btnBurger = document.querySelector(".col");
+        let Menu = document.querySelector(".Menu");
+        let ListItem = document.querySelectorAll(".Menu-list-item");
+        // let closeBtn = document.querySelector(".close");
+    
+        let TopBar = document.querySelector(".top");
+        let BottomBar = document.querySelector(".bottom");
+        let MiddleBar = document.querySelector(".middle");
+        
+         
+        btnBurger.addEventListener("click", function(){
+            Menu.classList.toggle("active");
+            TopBar.classList.toggle("top--Active");
+            BottomBar.classList.toggle("bottom--Active");
+            MiddleBar.classList.toggle("middle--Active");    
+            // closeBtn.classList.toggle("active");   
+            console.log("btn");
+        });
+    
+        ListItem.forEach(element => {      
+            element.addEventListener("click", function(){         
+                Menu.classList.remove("active");
+                // closeBtn.classList.remove("active");   
+                TopBar.classList.remove("top--Active");
+                BottomBar.classList.remove("bottom--Active");
+                MiddleBar.classList.remove("middle--Active");    
+                console.log("btn");
+            });    
+        });
+
+        // closeBtn.addEventListener("click", function(){      
+        //     closeBtn.classList.remove("active");   
+        //     Menu.classList.remove("active");
+        //     TopBar.classList.remove("top--Active");
+        //     BottomBar.classList.remove("bottom--Active");
+        //     MiddleBar.classList.remove("middle--Active");    
+        //     console.log("btn");
+        // }); 
+    
+    }
+    render() {
+        return (
     <React.Fragment>
     <div className='cursor'></div>
     <div className='Menu slide-in-top'>
+        {/* <div className="close">
+                <i class="fas fa-times"></i>
+        </div>     */}
         <ul className='Menu-list' data-offset='10'>
         <NavLink to="/">  <li className='Menu-list-item'>
           Home          
@@ -55,5 +140,7 @@ const Header = () =>(
       </nav>
     </header>  
     </React.Fragment>
-);
+        )
+    }
+};
 export default Header;

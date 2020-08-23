@@ -88,7 +88,7 @@ $split-color:     #FF2C75;
  
   .Menu-list {
     @extend %font-settings;
-    font-size: $font-size;
+    // font-size: $font-size;
     line-height: 1.2;
     padding: 0;
     z-index: 1;
@@ -255,4 +255,23 @@ $split-color:     #FF2C75;
   -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+@media (min-width:768px){
+  .Menu{
+    .Menu-list{
+      .Menu-list-item{
+        font-size: 4.5rem;
+      }
+    }
+  }
+}
+@media (min-width:320px){
+  .Menu{
+    .Menu-list{
+      .Menu-list-item{
+        font-size: 3.5rem;
+      }
+    }
+  }
 }

@@ -18,8 +18,6 @@
   var btnPlay = document.getElementById("play--interval");
   var myVar;
   
-  // console.log(Numb0);
-  // console.log(Numb1);
   
   nextBtn.classList.add("active");
   
